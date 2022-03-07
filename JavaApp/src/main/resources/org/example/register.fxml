@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="573.0" prefWidth="555.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controllers.RegisterController">
+   <children>
+      <Text fontSmoothingType="LCD" layoutX="183.0" layoutY="51.0" stroke="#ff880092" text="Rejestracja" textAlignment="CENTER" wrappingWidth="178.13671875">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font></Text>
+      <TextField fx:id="name" layoutX="155.0" layoutY="87.0" prefHeight="25.0" prefWidth="235.0" promptText="Imie" />
+      <TextField fx:id="surname" layoutX="155.0" layoutY="118.0" prefHeight="25.0" prefWidth="235.0" promptText="Nazwisko" />
+      <DatePicker fx:id="birthday" editable="false" layoutX="155.0" layoutY="150.0" prefHeight="25.0" prefWidth="235.0" promptText="Data urodzenia" />
+      <TextField fx:id="town" layoutX="155.0" layoutY="181.0" prefHeight="25.0" prefWidth="235.0" promptText="Miasto" />
+      <TextField fx:id="street" layoutX="155.0" layoutY="212.0" prefHeight="25.0" prefWidth="235.0" promptText="Ulica" />
+      <TextField fx:id="house_num" layoutX="155.0" layoutY="243.0" prefHeight="25.0" prefWidth="235.0" promptText="Numer domu" />
+      <TextField fx:id="door_num" layoutX="155.0" layoutY="274.0" prefHeight="25.0" prefWidth="235.0" promptText="Numer mieszkania" />
+      <TextField fx:id="email" layoutX="155.0" layoutY="321.0" prefHeight="25.0" prefWidth="235.0" promptText="Email" />
+      <PasswordField fx:id="password" layoutX="155.0" layoutY="352.0" prefHeight="25.0" prefWidth="235.0" promptText="Hasło" />
+      <PasswordField fx:id="_password" layoutX="155.0" layoutY="387.0" prefHeight="25.0" prefWidth="235.0" promptText="Powtórz hasło" />
+      <Button layoutX="289.0" layoutY="465.0" mnemonicParsing="false" onAction="#register" text="Zarejestruj" />
+      <Button layoutX="183.0" layoutY="465.0" mnemonicParsing="false" onAction="#backToLogin" text="Anuluj" />
+      <Text fx:id="errorText" fill="RED" layoutX="155.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="235.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

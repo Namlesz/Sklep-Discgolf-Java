@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="360.0" prefWidth="325.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controllers.LoginController">
+   <children>
+      <TextField id="emailField" fx:id="email" layoutX="92.0" layoutY="138.0" promptText="E-mail" />
+      <PasswordField fx:id="password" layoutX="92.0" layoutY="168.0" promptText="Hasło" />
+      <Text fill="#000000ba" layoutX="63.0" layoutY="83.0" stroke="#97510bbd" strokeLineCap="ROUND" strokeType="OUTSIDE" text="Sklep Discgolf">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Text>
+      <Button id="loginButton" layoutX="92.0" layoutY="250.0" mnemonicParsing="false" onAction="#login" text="Zaloguj" />
+      <Button id="registerButton" layoutX="169.0" layoutY="250.0" mnemonicParsing="false" onAction="#registerScene" text="Zarejestruj" />
+      <Text fx:id="errorText" fill="RED" layoutX="92.0" layoutY="303.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Błędne hasło lub email" textAlignment="CENTER" visible="false" wrappingWidth="149.0">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

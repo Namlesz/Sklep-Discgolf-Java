@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controllers.OrderHistoryController">
+    <children>
+        <TableView fx:id="HistoryTable" layoutX="129.0" layoutY="7.0" prefHeight="386.0" prefWidth="465.0">
+            <columns>
+                <TableColumn prefWidth="42.0" text="ID">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="id" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="203.0" text="Data zamówienia">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="orderDate" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="208.0" text="Status">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="state" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <Button layoutX="20.0" layoutY="337.0" mnemonicParsing="false" onAction="#productsView" prefHeight="30.0" prefWidth="100.0" text="Wstecz" />
+      <Button layoutX="20.0" layoutY="68.0" mnemonicParsing="false" onAction="#showDetails" prefHeight="30.0" prefWidth="100.0" text="Szczegóły" />
+    </children>
+</AnchorPane>

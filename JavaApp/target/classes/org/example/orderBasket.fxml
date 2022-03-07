@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="473.0" prefWidth="877.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controllers.OrderBasketController">
+    <children>
+        <TableView fx:id="basketTable" editable="true" layoutX="228.0" layoutY="7.0" prefHeight="454.0" prefWidth="629.0">
+            <columns>
+                <TableColumn editable="false" prefWidth="446.0" sortable="false" text="Nazwa">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn editable="false" prefWidth="87.0" sortable="false" text="Cena">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="price" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="countCol" minWidth="0.0" onEditCommit="#changeCount" prefWidth="87.0" sortable="false" text="Ilość">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="count" />
+                    </cellValueFactory>
+                    <cellFactory>
+                        <TextFieldTableCell fx:factory="forTableColumn" />
+                    </cellFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <Button layoutX="19.0" layoutY="129.0" mnemonicParsing="false" onAction="#back" prefHeight="31.0" prefWidth="72.0" text="Wstecz">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="144.0" layoutY="129.0" mnemonicParsing="false" onAction="#delete" prefHeight="31.0" prefWidth="72.0" text="Usuń">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="81.0" layoutY="404.0" mnemonicParsing="false" onAction="#buy" prefHeight="31.0" prefWidth="72.0" text="Kup">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Text layoutX="14.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Podsumowanie zamówienia" underline="true">
+         <font>
+            <Font name="System Italic" size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="55.0" layoutY="84.0" stroke="#f5920c" strokeType="OUTSIDE" text="Koszyk" textAlignment="CENTER" wrappingWidth="125.28125">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Text>
+      <Text fx:id="summaryText" layoutX="14.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" wrappingWidth="207.7685546875">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>

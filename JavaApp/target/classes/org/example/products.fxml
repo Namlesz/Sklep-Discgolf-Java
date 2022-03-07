@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controllers.ProductsController">
+    <children>
+        <TableView fx:id="productsTable" layoutX="127.0" layoutY="7.0" prefHeight="532.0" prefWidth="810.0">
+            <columns>
+                <TableColumn prefWidth="115.0" text="Kod towaru">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="code" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="318.0" text="Nazwa produktu">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn minWidth="0.0" prefWidth="70.0" text="Rodzaj">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="chain" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="98.0" text="Kod EAN">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="ean" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="34.0" text="Vat">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="vat" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="52.0" text="Ocena">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="rating" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="114.0" text="Cena">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="price" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+      <Button layoutX="15.0" layoutY="402.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="30.0" prefWidth="101.0" text="Dodaj produkt" />
+      <Button layoutX="15.0" layoutY="441.0" mnemonicParsing="false" onAction="#summary" prefHeight="30.0" prefWidth="101.0" text="Koszyk" />
+      <Text fx:id="cartInfo" layoutX="15.0" layoutY="491.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ilość produktów w koszyku: 0" wrappingWidth="101.0">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Text>
+      <Button layoutX="15.0" layoutY="137.0" mnemonicParsing="false" onAction="#orderHistory" prefHeight="30.0" prefWidth="101.0" text="Zamówienia" />
+      <Button layoutX="15.0" layoutY="53.0" mnemonicParsing="false" onAction="#tournamentList" prefHeight="30.0" prefWidth="101.0" text="Lista turniejów" />
+      <Button layoutX="15.0" layoutY="96.0" mnemonicParsing="false" onAction="#myTournament" prefHeight="30.0" prefWidth="101.0" text="Moje turnieje" />
+    </children>
+</AnchorPane>
